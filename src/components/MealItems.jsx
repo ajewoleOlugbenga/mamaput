@@ -1,4 +1,5 @@
 import { Formatter } from "../utils/Formatting"
+import Button from "./UI/Button"
 
 const MealItems = ({meal}) => {
   return (
@@ -11,7 +12,7 @@ const MealItems = ({meal}) => {
             <p className='meal-item-description'>{meal.description}</p>
         </div>
         <p className='meal-item-action'>
-            <button>Add to Cart</button>
+            <Button textOnly={false}>Add to Cart</Button>
         </p>
         </article> 
     </li>
