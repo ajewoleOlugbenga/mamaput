@@ -1,13 +1,18 @@
-import React from "react";
+
+import Cart from "./components/Cart";
 import Header from "./components/Header";
-import Meals from "./components/Meals";
+import Meals from "./components/meal/Meals";
 import { CartContextProvider } from "./components/store/CartContext";
+import { UserProgressContextProvider } from "./components/store/UserProgressContext";
 
 const App = () => {
   return (
     <CartContextProvider>
-      <Header />
-      <Meals />
+      <UserProgressContextProvider>
+        <Header />
+        <Meals />
+      <Cart/>
+      </UserProgressContextProvider>
     </CartContextProvider>
   );
 };
